@@ -1,0 +1,16 @@
+#The Observed Pin
+
+from itertools import product
+def get_pins(observed):
+    possibilities={"1": "124",
+                   "2": "1235",
+                   "3": "236",
+                   "4": "124",
+                   "5": "24568",
+                   "6": "3569",
+                   "7": "478",
+                   "8": "57890",
+                   "9": "689",
+                   "0": "80"}
+    for pins in product(*(possibilities[i] for i in observed)):
+        yield "".join(pins)
