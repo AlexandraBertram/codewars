@@ -1,5 +1,15 @@
 #The Observed Pin
 
+# When observing the entry of a PIN is possible that each of the digits witnessed could 
+# actually be another adjacent digit (horizontally or vertically, but not diagonally). 
+# E.g. instead of the 1 it could also be the 2 or 4. And instead of the 5 it could also be the 2, 4, 6 or 8.
+
+#Can you find all those variations? It would be nice to have a function, that returns an array of all variations 
+# for an observed PIN with a length of 1 to 8 digits. We could name the function getPINs (get_pins in python). 
+# But please note that all PINs, the observed one and also the results, must be strings, because of potentially leading '0's.
+
+
+
 from itertools import product
 def get_pins(observed):
     possibilities={"1": "124",
@@ -14,3 +24,4 @@ def get_pins(observed):
                    "0": "80"}
     for pins in product(*(possibilities[i] for i in observed)):
         yield "".join(pins)
+
