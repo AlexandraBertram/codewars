@@ -1,0 +1,10 @@
+#A Chain Adding Function 5kyu
+
+# We want to create a function that will add numbers together 
+# when called in succession.
+# We also want to be able to continue to add numbers to our chain.
+# We should be able to store the result and reuse it.
+
+class add(int):
+    def __call__(self, n):
+            return add(self+n)
