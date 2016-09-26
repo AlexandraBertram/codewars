@@ -1,4 +1,4 @@
-#The Observed Pin
+#The Observed Pin 4kyu
 
 # When observing the entry of a PIN is possible that each of the digits witnessed could 
 # actually be another adjacent digit (horizontally or vertically, but not diagonally). 
