@@ -1,0 +1,26 @@
+#IP Validation 4kyu 
+
+# Write an algorithm that will identify valid IPv4 addresses 
+# in dot-decimal format. 
+# Input to the function is guaranteed to be a single string.
+
+def is_valid_IP(strng):
+    li=strng.split('.')
+
+    for number in li:
+        try:
+            float(number)
+            if float(number)<=0:
+                return False               
+            elif list(number)[0]=='0':
+                return False
+            elif float(number)>255:
+                return False
+        except ValueError:
+            return False
+
+    if ' ' in strng:
+        return False
+        
+    if len(li)!=4:
+        return False
